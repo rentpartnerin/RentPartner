@@ -1,0 +1,2 @@
+import Page from "../components/common/Page"; import SectionHead from "../components/common/SectionHead"; import BookingForm from "../components/booking/BookingForm";
+export default function Booking(){return <Page narrow><SectionHead kicker="Booking request" title="Tell us what you need." text="Complete the form below. This creates a request; it does not confirm a booking automatically."/><BookingForm/></Page>}

@@ -1,0 +1,7 @@
+export const services = [
+  {id:"travel",icon:"Plane",name:"Travelling Partner",short:"Travel company, trip assistance and event companionship.",desc:"A professional companion for planned travel, local exploration and events. Requests are reviewed for availability and fit.",tags:["Travel","Events","Local assistance"]},
+  {id:"home",icon:"Home",name:"House TakeCare",short:"Reliable check-ins and basic home assistance while you're away.",desc:"Scheduled home check-ins, basic assistance and updates while you are travelling or unavailable.",tags:["Check-ins","Home assistance","Updates"]},
+  {id:"pet",icon:"PawPrint",name:"Pet Walker",short:"Friendly pet walking and everyday companionship for pets.",desc:"Book a trusted pet walker for regular walks, playtime and simple companionship.",tags:["Dog walking","Pet care","Companionship"]},
+  {id:"companion",icon:"HeartHandshake",name:"Companionship",short:"Conversation and social company for everyday moments.",desc:"A respectful, non-medical companionship service for conversation, outings and everyday social company.",tags:["Conversation","Outings","Social company"]},
+  {id:"social",icon:"Users",name:"Social & Dating",short:"A separate social experience with clear consent and conduct rules.",desc:"Meet people for social connection and dating through a dedicated experience. Age, consent, privacy and community rules apply.",tags:["Social","Dating","18+"]}
+];
