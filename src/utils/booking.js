@@ -20,6 +20,6 @@ Requirements: ${form.message || "None"}`;
 }
 
 export function getWhatsAppUrl(message) {
-  if (APP_CONFIG.whatsappNumber.startsWith("91+9057708005")) return "#";
+  if (APP_CONFIG.whatsappNumber.startsWith("YOUR_")) return "#";
   return `https://wa.me/${APP_CONFIG.whatsappNumber.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
 }
