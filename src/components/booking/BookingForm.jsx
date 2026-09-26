@@ -3,14 +3,16 @@ import {useNavigate,useLocation} from "react-router-dom";
 import {services} from "../../data/services";
 import Field from "../common/Field";
 import Icon from "../common/Icon";
-import {buildBookingMessage} from "../../utils/booking";
+import {buildBookingMessage, getTelegramShareUrl, getWhatsAppShareUrl} from "../../utils/booking";
 
 export default function BookingForm(){
  const navigate=useNavigate(); const qs=new URLSearchParams(useLocation().search);
  const [form,setForm]=useState({service:qs.get("service")||"",name:"",mobile:"",whatsapp:"",email:"",city:"",pin:"",date:"",time:"",duration:"",people:"1",location:"",message:"",preference:"No Preference"});
  const upd=e=>setForm({...form,[e.target.name]:e.target.value});
  const valid=form.service&&form.name&&form.mobile&&form.whatsapp&&form.city&&form.date&&form.time&&form.duration&&form.location;
- const submit=e=>{e.preventDefault();if(!valid)return;sessionStorage.setItem("rentpartnerBooking",JSON.stringify(form));sessionStorage.setItem("rentpartnerBookingMessage",buildBookingMessage(form));navigate("/booking-success");};
+//  const submit=e=>{e.preventDefault();if(!valid)return;sessionStorage.setItem("rentpartnerBooking",JSON.stringify(form));sessionStorage.setItem("rentpartnerBookingMessage",buildBookingMessage(form));navigate("/booking-success");};
+ const submit = e => {e.preventDefault();if (!valid) return;const message = buildBookingMessage(form);sessionStorage.setItem("rentpartnerBooking",JSON.stringify(form));sessionStorage.setItem("rentpartnerBookingMessage",message);window.open(getTelegramShareUrl(message),"_blank","noopener,noreferrer");setTimeout(() => {window.open(getWhatsAppShareUrl(message),"_blank","noopener,noreferrer");}, 500);navigate("/booking-success");}; 
+ 
  return <form className="form card" onSubmit={submit}>
   <div className="form-section"><h3>Service & schedule</h3><div className="two"><Field label="Service *"><select name="service" value={form.service} onChange={upd} required><option value="">Select a service</option>{services.map(s=><option value={s.name} key={s.id}>{s.name}</option>)}</select></Field><Field label="Duration *"><select name="duration" value={form.duration} onChange={upd} required><option value="">Select duration</option><option>1 hour</option><option>2 hours</option><option>Half day</option><option>Full day</option><option>Custom</option></select></Field></div><div className="three"><Field label="Preferred date *"><input type="date" name="date" value={form.date} onChange={upd} required/></Field><Field label="Preferred time *"><input type="time" name="time" value={form.time} onChange={upd} required/></Field>
   {/*<Field label="People"><input type="number" min="1" name="people" value={form.people} onChange={upd}/></Field>*/}

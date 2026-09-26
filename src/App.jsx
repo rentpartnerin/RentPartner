@@ -7,7 +7,7 @@ import ServiceDetail from "./pages/services/ServiceDetail";
 import PartnerProfile from "./pages/partners/PartnerProfile";
 import Booking from "./pages/Booking";
 import BookingSuccess from "./pages/BookingSuccess";
-// import BecomePartner from "./pages/BecomePartner";
+import BecomePartner from "./pages/BecomePartner";
 // import Login from "./pages/account/Login";
 import About from "./pages/About";
 import Safety from "./pages/Safety";
@@ -20,8 +20,8 @@ export default function App(){return <Routes><Route element={<Layout/>}>
     <Route path="/services/:id" element={<ServiceDetail/>}/>
    {/*<Route path="/partners" element={<Partners/>}/>
     <Route path="/partners/:id" element={<PartnerProfile/>}/>
-    <Route path="/become-a-partner" element={<BecomePartner/>}/>
     <Route path="/login" element={<Login/>}/>*/} 
+    <Route path="/become-a-partner" element={<BecomePartner/>}/>
      <Route path="/book" element={<Booking/>}/>
     <Route path="/booking-success" element={<BookingSuccess/>}/>
 <Route path="/about" element={<About/>}/>

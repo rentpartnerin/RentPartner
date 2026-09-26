@@ -8,7 +8,7 @@ function QuickBook(){return <div className="quick card"><div className="quick-to
 
 export default function Home(){return <>
 <section className="hero"><div className="container hero-grid"><div><div className="eyebrow"><span className="pulse"/> Trusted lifestyle services in India</div><h1>Find the Right <em>Partner</em> for Your Time.</h1><p className="lead">Book trusted partners for travel, companionship, pet walking, house care and everyday lifestyle services.</p><div className="actions"><Link className="btn" to="/book">Book a Partner <Icon name="ArrowRight"/></Link>
-{/*<Link className="btn btn-ghost" to="/become-a-partner">Become a Partner</Link>*/}
+<Link className="btn btn-ghost" to="/become-a-partner">Become a Partner</Link>
 </div><div className="trust-row"><span><Icon name="ShieldCheck"/> Verification-focused</span><span><Icon name="LockKeyhole"/> Privacy-conscious</span><span><Icon name="Headphones"/> Human support</span></div></div>
 {/*<QuickBook/>*/} 
 </div></section>
