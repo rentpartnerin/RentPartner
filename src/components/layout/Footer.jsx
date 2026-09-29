@@ -11,6 +11,6 @@ export default function Footer() {
   <Link to="/become-a-partner">Become a Partner</Link>*/}
   </div>
   <div><b>Company</b><Link to="/about">About</Link><Link to="/safety">Safety</Link><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link></div>
-  <div><b>Support</b><span>{APP_CONFIG.supportEmail}</span><span>{APP_CONFIG.supportPhone}</span></div>
+  <div><b>Support</b><span>{APP_CONFIG.supportEmail}</span><span>{}</span></div>
  </div><div className="container footer-bottom"><span>© {new Date().getFullYear()} RentPartner. All rights reserved.</span><span>Requests are reviewed before confirmation.</span></div></footer>;
 }

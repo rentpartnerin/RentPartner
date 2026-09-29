@@ -18,9 +18,9 @@ export default function BookingSuccess() {
   const text =
     sessionStorage.getItem("rentpartnerBookingMessage") || "";
 
-  const wa = getWhatsAppUrl(text);
+  // const wa = getWhatsAppUrl(text);
 
-  const waGURL = `${getWhatsAppGroupUrl()}?text=${encodeURIComponent(text)}`;
+  const waGURL = APP_CONFIG.whatsappUrl || `https://wa.me/?text=${encodeURIComponent(text)}`;
 
   const telegram = `https://t.me/share/url?url=${encodeURIComponent(
     APP_CONFIG.telegramUrl || "https://t.me/RentPartnerCompanions"
@@ -101,6 +101,38 @@ export default function BookingSuccess() {
           <Link to="/book">Edit request</Link>
           <Link to="/safety">Safety guidelines</Link>
         </div>
+
+        <div class="donation-card">
+  <div class="donation-icon">♥</div>
+
+  <div class="donation-content">
+    <div class="donation-label">SUPPORT RENTPARTNER</div>
+
+    <h3>Help us grow</h3>
+
+    <p>
+      Your support helps us improve RentPartner and build a
+      better experience for our community.
+    </p>
+
+    <a
+      class="donation-button"
+      href="https://u.payu.in/BJ6CQO14eq1g"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span>♥</span>
+      Support Us
+      <span class="donation-arrow">→</span>
+    </a>
+
+    <small>Secure payment powered by PayU</small>
+  </div>
+</div>
+
+{/* <div> <a style=" width: 200px; background-color: #1CA953; text-align: center; font-weight: 800; padding: 11px 0px; color: white; font-size: 12px; display: inline-block; text-decoration: none; border-radius:3.229px; " href='https://u.payu.in/BJ6CQO14eq1g' > Donate Now </a> </div> */}
+
+
       </div>
     </Page>
   );
