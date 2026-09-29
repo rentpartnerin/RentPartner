@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import Logo from "./Logo";
 import {APP_CONFIG} from "../../config/app";
+import DonateCom from "../DonateCom";
 
 export default function Footer() {
  return <footer><div className="container footer-grid">
@@ -11,6 +12,10 @@ export default function Footer() {
   <Link to="/become-a-partner">Become a Partner</Link>*/}
   </div>
   <div><b>Company</b><Link to="/about">About</Link><Link to="/safety">Safety</Link><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link></div>
-  <div><b>Support</b><span>{APP_CONFIG.supportEmail}</span><span>{}</span></div>
- </div><div className="container footer-bottom"><span>© {new Date().getFullYear()} RentPartner. All rights reserved.</span><span>Requests are reviewed before confirmation.</span></div></footer>;
+  <div><b>Support</b><span>{APP_CONFIG.supportEmail}</span><span>{}</span></div> 
+ </div>
+  <div className="container mt-4 grid gap-2 text-sm text-slate-500">
+     <DonateCom/>
+  </div>
+ <div className="container footer-bottom"><span>© {new Date().getFullYear()} RentPartner. All rights reserved.</span><span>Requests are reviewed before confirmation.</span></div></footer>;
 }

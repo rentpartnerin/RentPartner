@@ -102,6 +102,10 @@ export default function BookingSuccess() {
           <Link to="/safety">Safety guidelines</Link>
         </div>
 
+
+{/*-----------------------             Donate Paymentgateway              -------------------- */}
+
+
         <div class="donation-card">
   <div class="donation-icon">♥</div>
 

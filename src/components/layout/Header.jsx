@@ -7,7 +7,7 @@ export default function Header() {
   const [open,setOpen] = useState(false);
     {/* additionally add partners
      ["Partners","/partners"],*/}
-  const nav=[["Book a Partner","/book"],["Services","/services"],["Safety","/safety"],["About","/about"]];
+  const nav=[["Book a Partner","/book"],["Services","/services"],["Safety","/safety"],["About","/about"], ["Support Us", "/donate"]];
   return <header><div className="nav-wrap container"><Logo/>
     <nav className={open ? "open" : ""}>{nav.map(([label,path])=>
       <Link key={path} onClick={()=>setOpen(false)} to={path}>{label}</Link>)}
